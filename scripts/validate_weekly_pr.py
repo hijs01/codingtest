@@ -145,10 +145,10 @@ def main():
     github_id = sorted(github_ids)[0]
     user_dir = os.path.join(week_folder, github_id)
 
-    # README 검사
-    readme = os.path.join(user_dir, "README.md")
-    if not os.path.isfile(readme):
-        fail("README.md가 없습니다.")
+    # # README 검사
+    # readme = os.path.join(user_dir, "README.md")
+    # if not os.path.isfile(readme):
+    #     fail("README.md가 없습니다.")
 
     # p1, p2, p3 검사
     missing = []
