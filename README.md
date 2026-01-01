@@ -1,144 +1,101 @@
-📘 Weekly Coding Test Study
+## 🧭 스터디 제출 & 출석 방법
 
-코딩 테스트 실력 향상을 목표로 하는 주 1회 스터디입니다.
-매주 정해진 문제를 풀고, Pull Request(PR) 를 통해 출석과 제출을 동시에 관리합니다.
+### 한 줄 요약
+문제 3개 풀고 PR 1개 올리면 출석 완료  
+(README 제출 ❌ 필요 없음)
 
-🗓 스터디 운영 방식
+---
 
-주 1회 모임
+### 1. 이번 주 문제 확인
+weekly/YYYY-WXX/problems.md
 
-매주 문제 3개 풀이
+yaml
+Copy code
 
-Pull Request 1개 제출 = 출석 1회
+---
 
-모임 당일 시작 전까지 PR 제출 필수
+### 2. 레포 Fork (처음 한 번만)
+- 스터디 레포 오른쪽 위 **Fork** 클릭
+- 내 GitHub 계정으로 fork 생성
 
-프로그래밍 언어 자유
+---
 
-✅ 출석 인정 기준 (중요)
+### 3. VS Code에서 내 fork 열기
+1. VS Code 실행
+2. `Git: Clone`
+3. 내 fork 레포 주소 붙여넣기
+4. 폴더 열기
 
-아래 조건을 모두 만족해야 출석으로 인정됩니다.
+---
 
-해당 주차 문제 3개 모두 풀이
+### 4. 새 브랜치 만들기 (중요)
+- VS Code 왼쪽 아래 `master` 클릭
+- **Create new branch**
+- 이름 예:
+2026-W01-내GitHubID
 
-지정된 폴더 구조를 지켜서 제출
+yaml
+Copy code
 
-Pull Request가 모임 시작 전까지 생성
+---
 
-자동 검증(GitHub Actions)을 통과
+### 5. 문제 풀이 파일 만들기
+아래 구조를 그대로 만들기:
 
-❌ 모임 시작 이후에 생성된 PR은
-풀이가 맞아도 결석 처리됩니다.
+weekly/YYYY-WXX/
+내GitHubID/
+p1/
+p2/
+p3/
 
-🔁 Pull Request(PR)란?
+markdown
+Copy code
 
-Pull Request(PR) 는
-👉 이번 주 문제 풀이를 제출하면서 동시에 출석을 체크하는 방법입니다.
+- `p1 / p2 / p3` 모두 필수
+- 각 폴더에 코드 파일 1개 이상
+- 언어 자유 (Python / Java / C++ 등)
+- `.txt` ❌ (자동검증 실패)
 
-쉽게 말하면:
+**예시**
+weekly/2026-W01/
+hijs01/
+p1/solution.py
+p2/solution.java
+p3/solution.cpp
 
-“이번 주 문제를 다 풀었어요. 확인해 주세요.”
-라고 GitHub에 요청하는 버튼입니다.
+yaml
+Copy code
 
-이 스터디에서는:
+---
 
-PR 1개 = 출석 1회
+### 6. Commit & Push
+1. VS Code 왼쪽 **Source Control**
+2. Commit 메시지 작성
+3. **Commit → Push**
 
-PR 생성 시간으로 출석 여부를 판단합니다.
+---
 
-✅ 왜 Pull Request로 출석을 하나요?
+### 7. Pull Request(PR) 만들기
+- Push 후 뜨는 **Create Pull Request** 클릭  
+- 또는 GitHub에서 PR 생성
 
-PR을 사용하면 아래 정보가 자동으로 기록됩니다.
+**PR 1개 = 출석 1회**
 
-👤 누가 제출했는지 (GitHub 계정)
+---
 
-⏰ 언제 제출했는지 (출석 시간 기준)
+### 8. 자동검증 확인
+PR 페이지에서 **Checks** 확인:
+- ✅ 통과 → 출석 인정
+- ❌ 실패 → 수정 후 다시 push (PR 새로 안 만들어도 됨)
 
-📂 무엇을 제출했는지 (문제 풀이 코드)
+---
 
-🤖 제출 조건 충족 여부 (자동 검사)
+### 자주 하는 실수
+- p1/p2/p3 중 하나 빠짐  
+- 코드 파일 없이 폴더만 있음  
+- PR 안 올림  
 
-그래서
-“늦었는지”, “문제 다 풀었는지” 같은
-애매한 상황이 생기지 않습니다.
+---
 
-📁 폴더 구조 (반드시 지켜주세요)
-weekly/
-  YYYY-WXX/
-    problems.md
-    solutions/
-      <github-id>/
-        p1/
-        p2/
-        p3/
-        README.md
-
-예시
-weekly/2026-W01/solutions/hijs01/
-  p1/solution.py
-  p2/solution.java
-  p3/solution.cpp
-  README.md
-
-✍️ 제출 방법 (참가자)
-
-이 저장소를 Fork (처음 한 번만)
-
-해당 주차 폴더에 문제 풀이 작성
-
-변경사항 Commit
-
-Pull Request 1개 생성
-
-제출 완료 ✅
-
-👉 매주 PR은 1개만 제출하면 됩니다.
-
-📄 README.md 작성 규칙 (필수)
-
-각자 폴더 안의 README.md에는 아래 내용을 작성해주세요.
-
-# Week XX – 이름(GitHub ID)
-
-## Problem 1
-- Approach:
-- Time Complexity:
-- Space Complexity:
-
-## Problem 2
-- Approach:
-- Time Complexity:
-- Space Complexity:
-
-## Problem 3
-- Approach:
-- Time Complexity:
-- Space Complexity:
-
-
-언어는 자유
-
-풀이 아이디어는 간단하게라도 반드시 작성
-
-🤖 자동 검증 (GitHub Actions)
-
-Pull Request가 생성되면 자동으로 아래를 검사합니다.
-
-p1, p2, p3 폴더 존재 여부
-
-각 폴더에 코드 파일 존재 여부
-
-README.md 존재 여부
-
-조건을 만족하지 않으면 ❌ PR이 실패하며
-출석으로 인정되지 않습니다.
-
-📌 꼭 알아두세요
-
-주당 PR 1개
-
-문제 3개 모두 필수
-
-모임 시작 전 PR 생성이 기준
-
-언어 자유 (Python / Java / C++ / JS 등 모두 가능)
+### 핵심 요약
+**p1 · p2 · p3 다 올리고 PR만 만들면 끝.**
